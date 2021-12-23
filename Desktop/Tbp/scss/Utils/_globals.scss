@@ -1,0 +1,13 @@
+
+body{  
+    display: flex;
+    flex-direction: column;
+    background-image: url("../Imagenes/body-f3.jfif");
+    background-size: cover;
+    background-attachment: fixed;
+    width: auto;
+    height: 100vh;
+}    
+@media only screen and (max-width: 400px) {      
+
+}

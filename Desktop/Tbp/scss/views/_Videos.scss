@@ -1,0 +1,123 @@
+
+.main4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+               
+    &__section1{
+    @include flex-mov (flex, row);
+    justify-content:space-around;
+    flex-wrap: wrap;
+
+/*Cajas Videos Iframe*/
+
+    &__videos-iframe{
+        @include cajas-iframe(60rem, 40rem, 1rem); 
+        border: $border-img;
+}
+
+/*Cajas de textos*/  
+
+    &__text-videos1{
+        @include cajas-videos(50rem, 40rem, 60%);
+        @include flex-mov (flex, column);
+        border-radius: 4rem;
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6;
+        border: $border-videos;
+        align-items:center; 
+        margin-bottom: 1rem;  
+        background-image: url("../Imagenes/dj1.jfif");
+        background-position: center;
+        background-size: cover;                           
+}
+    &__text-videos2{
+        @include cajas-videos(50rem, 40rem, 60%);
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6; 
+        border-radius: 4rem; 
+        border: $border-videos; 
+        @include flex-mov (flex, column);
+        align-items:center;  
+        background-image: url("../Imagenes/fondo-game4.jfif");
+        background-size: cover;
+             
+}
+    &__text-videos3{
+        @include cajas-videos(50rem, 40rem, 60%);
+        margin-top:1rem;
+        margin-bottom: 1rem;
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6;
+        border-radius: 4rem; 
+        border: $border-videos; 
+        @include flex-mov (flex, column);
+        align-items:center;
+        background-image: url("../Imagenes/vaso-pinta-neon.jfif"); 
+}        
+    &__text-videos4{
+        @include cajas-videos(50rem, 40rem, 70%);
+        margin-top:1rem;
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6;
+        border-radius: 4rem; 
+        border: $border-videos; 
+        @include flex-mov (flex, column);
+        align-items:center;                          
+} 
+    &__h2{
+    text-align: center;
+    font-family: $text-titulos;
+    font-size: 2em; 
+    color:$color-titulos;
+    letter-spacing: 0.3rem; 
+  }   
+}
+    &__titulos4{
+    color:$color-titulos; 
+    font-family: $text-titulos;
+    font-size: $size-titulos; 
+    letter-spacing: 0.5em;  
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;         
+  }
+}
+/*Mobile Responsive*/
+
+@media only screen and (max-width: 400px) { 
+
+.main4{
+    @include flex-mov(flex,column);
+    width: 33rem;
+    
+    &__section1 {
+    &__text-videos1,
+    &__text-videos2,
+    &__text-videos3{
+    display: none;  
+   }      
+  }      
+ }
+}               
+               /* Tablet Styles */
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+.main4{
+    @include flex-mov(flex,column);          
+}
+
+                /* Desktop Styles */
+
+@media only screen and (min-width: 961px) {
+.main-index{
+        font-size: 1.5em;
+}
+}
+}   

@@ -1,0 +1,128 @@
+
+.main1 {
+    margin-right: 1rem;
+    margin-top: 13rem;       
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr ;
+    grid-template-rows: repeat(5, 20rem);       
+    grid-gap:10rem;
+    grid-template-areas: 
+    "box1 . box4 " 
+    "box2 box2 box4 "
+    "box3 box5 box4 "
+    "box3 box5 . "
+    ". . . ";
+    
+        &__cyan {
+        grid-area: box1;             
+        transition: animation ease-in-out 2s, back;         
+        border-radius: 0rem 6rem 6rem 0rem;  
+}
+        &__cyan:hover {       
+        grid-area: box1;
+        background-color:rgb(123, 124, 124);
+        opacity: 60%;
+        transition: animation ease-in-out 5s, back;       
+        background:-webkit-gradient(linear, 28% 97%, 37% 12%, from(#3A76B4), to(#213696));
+        border-radius: 0rem 6rem 6rem 0rem;                        
+}
+        &__violeta{
+        grid-area: box2;
+        background-image: linear-gradient(to right, #7c2999, #9245ab, #a85fbc, #be7acf, #d494e1);
+        opacity: 50%;
+        border-radius: 0rem 6rem 6rem 0rem;
+        justify-content: flex-end;        
+}
+        &__verde{
+        grid-area: box3;
+        width: 22rem;
+        height: 37rem;
+        margin-left: 2rem;
+        padding: 1rem 1.5rem 1rem 1rem; 
+         .input-index{
+          width: 20rem;
+        }
+         .index-boton{
+          @include flex-mov(flex,row); 
+          margin-left: -5rem;
+               
+        } 
+         label{
+         letter-spacing: 3px;
+         font-size: $font-p;
+        }       
+    
+}
+        &__verde:hover{
+        grid-area: box3;
+        background-image: linear-gradient(to right, #dc489c, #e172ba, #e695d3, #ebb6e8, #f3d6f9);
+        opacity:70%; 
+        border-radius: 6rem 6rem 0rem 0rem;
+        -webkit-box-shadow: 0px 0px 300px 0px rgba(245,237,245,1);
+        -moz-box-shadow: 0px 0px 300px 0px rgba(245,237,245,1);
+        box-shadow: 0px 0px 300px 0px rgba(245,237,245,1);                
+}
+        &__amarillo{
+        grid-area: box4;        
+        opacity: 90%;
+        background-image:url(../Imagenes/beer-aside.jfif);
+        background-size:cover; 
+        background-repeat: no-repeat;    
+        border-radius: 5rem;
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6;
+} 
+        &__blanco{
+        opacity: 90%;        
+        grid-area: box5;
+        background-repeat: no-repeat;       
+        background-image: url("../Imagenes/Descendants-Icons.jfif"); 
+                          
+}
+        &__productores-beer{
+        grid-column-start: 2;        
+        grid-row-start: 1;
+} 
+        &__productores-beer:hover{  
+        opacity: 60%;
+        transition: animation ease-in-out 2s, back;
+        text-align: center;
+        border-radius: 6rem;
+        background:-webkit-gradient(linear, 28% 97%, 37% 12%, from(#3A76B4), to(#213696));        
+    }            
+}
+
+.login-tbp{
+     font-family: $text-nav;
+     color: $color-titulos;
+     font-size: 2em;
+     text-align: center;
+}            
+
+/* Mobile Styles */
+       
+@media only screen and (max-width: 400px) {
+
+.main1{
+     @include flex-mov(flex,column);
+     
+      &__verde{
+      margin-left:6rem;        
+     }   
+      &__amarillo{
+             display: none;
+             visibility: hidden;
+     }      
+   } 
+/* Tablet Styles */
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+}     
+/* Desktop Styles */
+        
+@media only screen and (min-width: 961px) {
+
+ }  
+}

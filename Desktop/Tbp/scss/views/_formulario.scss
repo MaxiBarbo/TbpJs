@@ -1,0 +1,173 @@
+
+.contForm{
+  border: 3px solid wheat;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 3rem;
+}
+.box-latas{
+  @include flex-mov (flex, row);
+  justify-content: space-around;
+  margin-top: 3rem;
+       
+}
+
+.caja{
+  @include cajas-videos(20rem,13rem,60%); 
+  box-sizing: border-box;
+  border:$border-videos;
+  text-align: center;
+   
+  border-radius: 2rem;   
+}
+
+.uno{
+  background-image: url("../Imagenes/lata-beer1.jfif");
+
+}
+
+.dos{
+  background-image: url("../Imagenes/lata-beer2.jfif");
+
+}
+
+.tres{
+  background-image: url("../Imagenes/hilbily1.png");
+
+}
+
+.cuatro{
+  background-image: url("../Imagenes/log-nomada2.jpg");
+  background-repeat: no-repeat;
+ 
+}
+
+.cinco{
+  background-image: url("../Imagenes/lata-beer6.jfif");
+   
+}
+
+.seis{
+  background-image: url("../Imagenes/Logo-tbp1.jpg");
+    
+}
+
+.nueve{
+  background-image: url("../Imagenes/Logo-tbp1.jpg");
+  background-size: cover;
+  display: none;
+  
+}
+.siete{
+  background-image: url("../Imagenes/lupulo6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 20%;
+  position: absolute;
+  z-index: -1;
+  height: 18rem; 
+  width: 18rem;  
+  left: 110rem;
+  top: 80rem;
+  display: none;
+  border-radius: 5rem;
+
+}
+.ocho{
+  background-image: url("../Imagenes/lupulo6.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 20%;
+  position: absolute;
+  z-index: -1;
+  height: 18rem; 
+  width: 18rem;  
+  left: 30rem;
+  top: 80rem;
+  display: none;
+  border-radius: 5rem;
+}
+
+.main-registro{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+
+}
+
+.zoom{
+  transition: .3s;
+}
+.zoom:hover{
+  transform: scale(1.1);
+}
+.infoNombres{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  width: 30rem;
+  margin-top: 1rem;
+  
+} 
+  
+//Mapa de lectura para cajas credas con Bucle//
+  
+$mapa: (
+      uno:rgb(115, 52, 197),
+      dos:rgb(0, 162, 255),
+      tres:rgb(65, 65, 77),
+      cuatro:rgb(124, 105, 105),
+      cinco:rgb(179, 48, 70),
+      seis: (yellow),
+    );
+  
+    @each $clase, $color in $mapa {
+    .caja.#{$clase}{
+       background-color: $color;
+    }
+  }
+ 
+/* Estilos Form Registro */
+input[type=text], input[type=password] {
+  width: 35rem;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1cc;
+  @include flex-mov(flex,column);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.registro-form{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  
+}
+
+a {
+  color: dodgerblue;
+}
+  p{
+    text-align: center;
+    color:$color-p;
+    letter-spacing: 5px;
+    font-family: $text-p; 
+    font-size: 1.5em;
+    
+  }
+
+    /*Mobile Responsive*/        
+
+@media only screen and (max-width: 400px) {
+ .box-latas{
+  display: none;
+ }   
+}
+

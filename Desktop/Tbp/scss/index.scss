@@ -1,0 +1,31 @@
+            /* Variables */
+@import "../scss/Utils/variables";
+
+            /*utils*/
+@import "../scss/Utils/buttons";
+@import "../scss/Utils/titulos";
+@import "../scss/Utils/grids";
+@import "../scss/Utils/mixings";
+
+            /*Globales*/
+@import "../scss/Utils/normalize";
+@import "../scss/Utils/animation";
+@import "../scss/Utils/globals";
+            
+            /*Partials*/
+
+@import "../scss/Partials/header";
+@import "../scss/Partials/footer";
+           
+            /*Html Views*/
+@import "../scss/views/Fotos";
+@import "../scss/views/Nosotros";
+@import "../scss/views/Reservas";
+@import "../scss/views/Videos";  
+@import "../scss/views/index-main";  
+@import "../scss/views/formulario";  
+@import "../scss/views/productores";
+@import "../scss/views/juegos"; 
+@import "../scss/views/404";  
+   
+

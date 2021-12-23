@@ -1,0 +1,75 @@
+/*titulos Index*/
+
+.titulo-violeta{
+    font-size: $size-titulos-mini;
+    font-family:$text-titulos;
+    color:$color-titulos;
+    animation-iteration-count: 3;
+    text-transform: uppercase;
+    text-align: center;                     
+    animation-name: aparecer2;  
+    margin-top: 8rem;
+    letter-spacing: 5px; 
+}
+/*titulos Fotos*/ /*titulos Nosotros*/
+
+.titulos{
+    font-size: $size-titulos;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color:$color-titulos;
+    font-family:$text-titulos;
+    border-bottom: 0.5rem solid black;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+/*titulos Reservas*/
+
+.titulo-agenda{
+    margin-top: 3rem;        
+    font-size:$size-titulos;
+    font-family: $text-titulos; 
+    margin-bottom: 3rem; 
+    letter-spacing: 10px;  
+    color: $color-titulos;
+    text-align: center;
+}
+.titulo-reserva{
+    color: $color-text-input;
+    font-size: 1.5em;
+    font-family: $text-titulos;
+}
+.a1{
+    color: white;
+    font-size: 2em;
+    
+}
+.a2{
+    color: $color-nav;
+    font-family: $text-nav;
+    size: 2em;
+}
+.tituloMg{
+    font-size: 3.5em;
+    margin-top: 1rem;        
+    font-family: $text-titulos; 
+    margin-bottom: 3rem; 
+    letter-spacing: 8px;  
+    color: $color-titulos;
+    text-align: center;
+    display: none;
+}
+
+/*titulos Videos*/   
+
+/*Mobile Responsive*/   
+
+@media only screen and (max-width: 400px) { 
+    .titulos{
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 3px;  
+}    
+}

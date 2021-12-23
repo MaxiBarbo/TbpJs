@@ -1,0 +1,92 @@
+
+header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 30vh;
+        border-bottom: yellow 0.2rem solid;  
+                            
+        .navegacion {
+        height: 30%;
+        border-bottom: 3rem;
+        grid-column-start: 2;
+	grid-row-start: 1;
+        text-shadow: 0 0 20px $shadow-nav, 0 0 20px rgba(10,175, 230,0);
+        letter-spacing: 0.5em;
+        opacity: 80%;
+        .menu3 {
+                font-size:$font-nav;
+                font-family: $text-nav;
+                color: $color-nav;
+                li {
+                margin:2rem;
+                 a {       
+                 position: relative;
+                 display: block;
+                 padding: 10px;
+                }       
+        } 
+        .nav-link {
+        color: $color-nav; 
+        }
+      }               
+   }  
+} 
+/*Imagen Logo tbp*/
+
+.imagen-nav {
+        width: 27rem;
+        height: 100%;        
+        opacity: 50%;
+        margin: 0;                        
+}
+.dropdown-menu{
+        opacity: 1;     
+}
+@media only screen and (max-width: 400px) {
+        header { 
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1.5fr ;
+        .navegacion{ 
+         grid-column-start: 1;
+         grid-row-start: 2;
+         
+         .navbar-toggler{
+          background-color:$color-nav;
+          opacity: 60%;
+         }
+         .menu3{
+         font-size: 1em;
+          li{
+            background-color: gray; 
+            text-align: center; 
+            margin: 0;
+            a{
+             padding: 2rem 4rem;       
+            }
+          }       
+        }         
+     } 
+                        
+.imagen-nav {
+        width: 130px;
+        height: 100px;
+        opacity: 80%;  
+        grid-row-start: 1;
+        grid-column-start: 1;
+        margin: 0;   
+      }
+   }
+}
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {  
+.navbar-toggler{
+        background-color:$color-nav;
+        opacity: 60%;
+        width: 5rem;
+        border-radius: 1rem;
+        }   
+
+}
