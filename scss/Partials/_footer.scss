@@ -1,0 +1,14 @@
+footer{
+    font-size: 1em;
+    display: flex;
+    align-items:center;  
+    height: 100%;
+    flex-direction: column;
+    
+    
+    .p-footer{
+        color: $color-nav;
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+    }
+} 

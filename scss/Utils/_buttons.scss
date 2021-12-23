@@ -1,0 +1,41 @@
+
+.form-control{
+    background-color: rgb(240, 236, 243);
+    font-size: 1em;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+.input-index{
+    width: 20rem;
+    border-radius: 3rem;
+}
+.btn-outline-primary{
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+.btn-outline-light{
+    margin-top: 3rem;
+    
+}
+.btn-outline-warning{
+    border-radius: 1rem;
+    padding: 5px 10px;
+    margin-left: 10rem;
+    border: none;
+    cursor:progress;
+    width: 50%;
+    opacity: 0.9;
+    font-size: 1.5em;
+
+}
+.btn-outline-warning:hover {
+    opacity: 90%;
+}    
+.btn-outline-danger {
+    width: 15rem;
+    align-self: flex-end;
+    margin-right: 2rem;
+    position: fixed;
+    margin-top: 2rem;
+    
+}

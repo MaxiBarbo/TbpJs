@@ -1,0 +1,33 @@
+[
+    {
+      "user": 1,
+      "nombre": "Robert",
+      "mail": "ro@lop",
+      "pass": "12345"
+    },
+    {
+      "user": 2,
+      "nombre": "juancho",
+      "mail": "ju@gmial",
+      "pass": "lllll"
+    },
+    {
+      "user": 2,
+      "nombre": "marce",
+      "mail": "marea@9333",
+      "pass": "leee"
+    },
+    {
+      "user": 4,
+      "nombre": "julio",
+      "mail": "jum@her",
+      "pass": "peee"
+    },
+    {
+      "user": 5,
+      "nombre": "juana",
+      "mail": "veuu@reee",
+      "pass": "asee"
+    }
+  
+  ]

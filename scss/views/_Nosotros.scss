@@ -1,0 +1,94 @@
+
+.main2{
+        display: flex;
+        flex-direction: column;   
+        margin-bottom: 3rem;
+        text-align: center;
+        align-items: center;
+        margin-top: 3rem;
+
+        &__div8__p2{
+        font-family: $text-p;
+        color: $color-p;
+        font-size: $font-p;
+        letter-spacing: 2px; 
+        
+}
+        &__div1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 5rem; 
+}
+        &__div10{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        margin: 5rem;                      
+}
+        &__div12{
+        margin-top: 5rem;              
+}
+        &__div9{
+        margin-top: 5rem;        
+}
+        &__carrusel1{
+        width: 60%;
+        border: $border-carr;
+        padding: 0;
+        margin-top: 3rem;
+        margin-bottom: 3rem; 
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6;      
+}
+        &__carrusel2{
+        width: 60%;        
+        margin-top: 3rem; 
+        border: $border-carr; 
+        padding: 0;  
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6;    
+}
+
+.imagen3{
+        margin-top: 5rem;
+        background-image: url("../Imagenes/foto-bar-general.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 50rem;
+        width: 70rem;
+        -moz-box-shadow: -1px 1px 8px #d6c9d6;
+        -webkit-box-shadow: -1px 1px 8px #d6c9d6;
+        box-shadow: -1px 1px 8px #d6c9d6; 
+                      
+}
+        .imagen3:hover{
+        background-image: url("../Imagenes/foto-bar-general2.jpg");
+        transition: ease 1.5s; 
+        opacity:$opacity-fotos;                        
+        } 
+}  
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) { 
+.main2{
+        width: 30rem;
+}  
+.imagen3{
+        display: none;
+}      
+              
+               /* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+header{
+        background-size: 32%;        
+}              
+                /* Desktop Styles */
+@media only screen and (min-width: 961px) {
+}
+}
+}
