@@ -496,6 +496,10 @@ footer {
     width: 30rem;
     border-radius: 1rem;
     padding: 1rem; }
+    .agenda__datos1 .formReserva {
+      color: white; }
+    .agenda__datos1 .form-control {
+      margin-bottom: 3rem; }
   .agenda__datos2 {
     margin-top: 2rem;
     width: 30rem;

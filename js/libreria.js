@@ -67,14 +67,58 @@ $("[name*='user']").on("click", function(){
   
     });
 
+    // creamos una clase para hacer una base de empleados
+    class Reservando {
+        constructor (nombre, contacto, dia, horario){
+        this.nombre = nombre;
+        this.contacto = contacto;
+        this.dia = dia;
+        this.horario = horario;
+        }
+    
+        saveReserva() {
+            localStorage.setItem('nombre', JSON.stringify(this.nombre))
+            localStorage.setItem('contacto', JSON.stringify(this.contacto))
+            localStorage.setItem('dia', JSON.stringify(this.dia))
+            localStorage.setItem('horario', JSON.stringify(this.horario))
+            
+          }
+    }
+    
+    const arrayUsuarios = [];
+    
+    // solicitamos los datos al empelador
+    const ingresoUsuarios = () => {
+    
+      let nombre = $("#formGroupExampleInput").val();
+      let contacto = $("#formGroupExampleInput2").val();
+      let dia = $("[name*='datetime-4']").val();
+      let horario = $("[name*='horario']").val();
+    
+      const nuevoUsuario = new Reservando(nombre, contacto, dia, horario);
+      arrayUsuarios.push(nuevoUsuario);
+      console.log(arrayUsuarios);
+    }
 // Funcion para crear usuarios medinte js tipo json
 
-    // index.js
-module.exports = () => {
-    const data = { users: [] }
-    // Create 1000 users
-    for (let i = 0; i < 1000; i++) {
-      data.users.push({ id: i, name: `user${i}` })
+class Tareas {
+    constructor(nombre, apellido, ) {
+      this.nombre = nombre;
+      this.apellido = apellido;
     }
-    return data
   }
+
+  let usuarios = [];
+  let ingreso = prompt("desea ingresar?").toLowerCase();
+
+  while (ingreso === "si") {
+    usuarios.push(
+      new Tareas(
+        apellido = prompt("Ingresa tu apellido"),
+        nombre = prompt("Ingresa tu nombre")
+      )
+    );
+
+    ingreso = prompt("desea ingresar otra usuario?").toLowerCase();
+  }
+  console.log(usuarios);
