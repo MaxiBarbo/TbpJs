@@ -52,7 +52,7 @@ $("[name*='mg']").click("click",() =>{
     $(".mail").append($('input:text[name=mail]').val());
 
     });
-    
+   
 
 $(document).ready(function(){
     const URLGET = "https://jsonplaceholder.typicode.com/posts"

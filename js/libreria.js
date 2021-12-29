@@ -122,3 +122,20 @@ class Tareas {
     ingreso = prompt("desea ingresar otra usuario?").toLowerCase();
   }
   console.log(usuarios);
+
+// funcion para guardar un dato del input y pushearlo al array dato
+
+  // Variable to hold request
+ var data = [];
+
+ $("#dataForm").submit(function(event) {
+     event.preventDefault();
+
+     data.push($(this).find('input[name="data"]').val());
+     
+     console.log(data)
+ });
+
+ function processData() {
+    
+ }

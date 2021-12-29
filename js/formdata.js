@@ -1,27 +1,28 @@
 
+// Funcion para solictar datos de entradas desde el formulario de "Registrar"
 
+const arr = [];
 
   function submit(e) {
     e.preventDefault()
-
-    const arr = []
     for (const element of e.target) {
     //  console.log(element.value)
-      element.value && arr.push({ name: element.name, value: element.value })
+      element.value && arr.push({ name: element.name, 
+                                  value: element.value })
     }
     
-  // al recorrer el array se guardan en array establecido y push del mismo
+  // al recorrer el array se guardan en const "arr" establecido y push del mismo
 
     const usuarioNuevo = new User(arr[0].value, arr[1].value, arr[2].value, arr[3].value)
     usuarioNuevo.save();
     arr.push(usuarioNuevo);
 
-    
-      // console.log(usuarioNuevo);
+  
+      console.log(arr);
 
     // se pushea una persona al array "arr"
-     const personOne = new User("mei34","meilin","ksikie@kek",93847);
-     arr.push(personOne);
+    //  const personOne = new User("mei34","meilin","ksikie@kek",93847);
+    //  arr.push(personOne);
      
  
     //  console.log(personOne);
@@ -40,7 +41,7 @@ $(document).ready(()=>{
 
           if(estado === "success"){
 
-           console.log(respuesta)
+          //  console.log(respuesta)
         }
     });
   
@@ -65,7 +66,7 @@ $(document).ready(()=>{
         }
 
         else{
-            console.log(estado);   
+            // console.log(estado);   
 
         }
     });

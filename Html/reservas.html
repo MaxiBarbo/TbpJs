@@ -62,40 +62,40 @@
     </header> 
                                 <!--Inicio Main-->
     <main onload="loadPage()">
+
       
-        <h2 class="titulo-agenda animate__animated animate__rubberBand animate__delay-2s">Agenda</h2>
+
+      
+         <h2 class="titulo-agenda animate__animated animate__rubberBand animate__delay-2s">Agenda</h2>
         <div class="agenda">
             <div>
               <h3 id="tituloFecha" name="tituloFecha"><span style="color: aliceblue;">Tu Fecha:</span><br><br></h3>
               <h3 id="tituloHorario" name="tituloHora"><span style="color: aliceblue;">Tu Horario:</span><br><br></h3>
             </div>
             <!--Inicio Inputs-->
-            <div class="agenda__datos1">               
+           <div class="agenda__datos1">               
                   
-              <form class="formReserva">
-                    
+              <form id="dataForm"> 
                     <label class="titulo-reserva" for="text" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>Nombre</label>
-                    <input  type="text" class="form-control" id="one">
+                    <input  type="text" class="form-control" name="dataOne">
 
                     <label class="titulo-reserva"  for="nombre"><span class="iconify" data-icon="mdi:account-edit-outline"></span>Contacto</label>
-                    <input  type="text" class="form-control" id="two">
+                    <input  type="text" class="form-control" name="dataTwo">
                     
                     <label class="titulo-reserva"  for="nombre"><span class="iconify" data-icon="mdi:account-edit-outline"></span>Fecha</label>
-	                  <input  type="date" class="form-control" id="three" name="fecha">
+	                  <input  type="date" class="form-control" name="dataThree">
 
                     <label class="titulo-reserva"  for="nombre"><span class="iconify" data-icon="mdi:account-edit-outline"></span>Horario</label>
-                    <input  type="time" class="form-control" id="four" name="horario">
-                   
-                    <input type="submit" onclick="ingresoUsuarios ();" name="ini" class="btn btn-outline-success"> 
-                      
-                  
+                    <input  type="time" class="form-control" name="dataFour">
 
-                  </form> 
+                    <input type="submit" class="btn btn-outline-light btn-lg"> </button>
+                    <button type="reset" class="btn btn-outline-primary btn-lg">Clear</button>
+                    <!-- <button  onclick='deleteUser()'class="btn btn-outline-primary btn-lg">Borrar Usuario</button> -->
+              </form>     
+                   <p>Tenes Cuenta? <a href="../Html/formulario.html">Log in</a>.</p>              
+          </div> 
 
-                    <p>Tenes Cuenta? <a href="../Html/formulario.html">Log in</a>.</p>
-                        
-            </div>
-            <!--Inicio calendario fechas y Reservas--> 
+            <!-- Inicio calendario fechas y Reservas--> 
             <div class="agenda__datos2"> 
               <div class="container1">
                 <div class="calendar">
@@ -121,8 +121,21 @@
               </div>
             </div>                 
         </div>
-            <!--Fin calendario fechas y Reservas--> 
-          
+            <!--Fin calendario fechas y Reservas  -->
+           
+         <!-- FORM -->
+        <!-- <div class="form-group row">
+            <label for="data" class="col-2 col-form-label">Dato</label>
+            <div class="col-10">
+                <input id="" name="dataOne" class="form-control" type="text" value="">
+                <input id="" name="dataTwo" class="form-control" type="text" value="">
+                <input id="" name="dataThree" class="form-control" type="date" value="">
+                <input id="" name="dataFour" class="form-control" type="time" value="">
+            </div>
+        </div>
+        <input class="btn btn-large btn-primary" value="Save" type="submit">
+      </form> -->
+
     </main>
                                         <!--Fin Main-->
 
@@ -212,7 +225,7 @@
 
     
     <script src="../js/reserva.js"></script>
-    
+    <script src="../js/formCall.js"></script>
     <script src="../js/calendario.js"></script>
     <!--Fin Script-->   
 </body>
