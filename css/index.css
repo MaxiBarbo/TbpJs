@@ -12,12 +12,12 @@
 .form-control {
   background-color: #f0ecf3;
   font-size: 1em;
-  border: 2px solid blue;
-  border-radius: 10px; }
+  border-radius: 0 2rem 2rem 0; }
 
-.input-index {
-  width: 20rem;
-  border-radius: 3rem; }
+#input-reserva {
+  width: 100%;
+  border-radius: 0 2rem 2rem 0;
+  height: 3rem; }
 
 .btn-outline-primary {
   margin-left: 5rem;
@@ -492,29 +492,39 @@ footer {
   justify-content: space-evenly;
   width: 100vw;
   flex-wrap: wrap; }
+  .agenda .pantalla {
+    margin-top: 5%; }
   .agenda__datos1 {
-    width: 30rem;
+    width: 40rem;
+    height: 100%;
     border-radius: 1rem;
     padding: 1rem; }
     .agenda__datos1 .formReserva {
       color: white; }
     .agenda__datos1 .form-control {
       margin-bottom: 3rem; }
+    .agenda__datos1 .pLogin {
+      margin-top: 2rem;
+      text-align: center; }
   .agenda__datos2 {
     margin-top: 2rem;
     width: 30rem;
     height: 100%;
     align-content: center; }
-  .agenda__tituloFecha {
-    color: #FFD046;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 5rem; }
-  .agenda__tituloHorario {
-    color: #FFD046;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 5rem; }
+
+.bReservas {
+  display: flex;
+  justify-content: space-between; }
+
+#dataForm {
+  margin-top: 6rem;
+  width: 100%; }
+
+#tfecha, #thorario, #tnombre {
+  color: #FFD046;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5rem; }
 
 .container1 {
   width: 100%;
@@ -605,19 +615,17 @@ footer {
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   .agenda {
-    width: 70%;
-    /* Desktop Styles */ }
+    width: 70%; }
     .agenda__datos1 {
-      width: 33rem;
-      margin-left: 2rem;
-      /* Tablet Styles */ }
-      .agenda__datos1 .mb-3 input {
-        width: 25rem; }
-      .agenda__datos1 .mb-3__datos2 .container1 {
-        display: none; } }
-  @media only screen and (max-width: 400px) and (min-width: 961px) {
-    .agenda .main-index {
-      font-size: 1.5em; } }
+      width: 100%; }
+  /* Tablet Styles */ }
+
+@media only screen and (max-width: 400px) and (min-width: 401px) and (max-width: 960px) {
+  /* Desktop Styles */ }
+
+@media only screen and (max-width: 400px) and (min-width: 401px) and (max-width: 960px) and (min-width: 961px) {
+  .main-index {
+    font-size: 1.5em; } }
 
 .main4 {
   display: flex;

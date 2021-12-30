@@ -9,6 +9,17 @@
     }
 }
 
+function saveStorage() {
+
+localStorage.setItem("Nombre", this.nombre)
+localStorage.setItem("Mail", this.mail)
+localStorage.setItem("Dia", this.dia)
+localStorage.setItem("Horario", this.horario)
+
+}
+// function deleteUser() {
+//     localStorage.clear()
+// }
 var data = [];
 
 $("#dataForm").submit(function(event) {
@@ -21,7 +32,10 @@ $("#dataForm").submit(function(event) {
 
     data.push(new Reserva(nombre,mail,dia,horario));
     
+      
 });
+
+
 console.log(data)
 
 

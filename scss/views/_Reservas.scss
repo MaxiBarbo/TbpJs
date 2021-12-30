@@ -1,12 +1,18 @@
 
-        .agenda {
+  .agenda {
         @include flex-mov(flex,row);
         justify-content: space-evenly;
         width: 100vw;
         flex-wrap: wrap;
 
+        .pantalla{
+          margin-top: 5%
+ 
+        }  
+
          &__datos1{
-         width: 30rem; 
+         width: 40rem;
+         height: 100%; 
          border-radius: 1rem;
          padding: 1rem;
 
@@ -17,6 +23,10 @@
            margin-bottom: 3rem;
           
          }
+         .pLogin{
+           margin-top: 2rem;
+           text-align: center;
+         }
             
         } 
 
@@ -26,20 +36,26 @@
          height:100% ;
          align-content: center;       
         }
-         &__tituloFecha{
-           color:$color-nav;
-           letter-spacing: 2px;
-           text-transform: uppercase;
-           margin-top: 5rem;                     
-         } 
-         &__tituloHorario{
-          color:$color-nav;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          margin-top: 5rem;                     
-       
-        }                
+                        
 }
+.bReservas{
+  display: flex;
+  justify-content: space-between;
+}
+
+#dataForm{
+  margin-top: 6rem;
+  width: 100%;
+
+}
+#tfecha,#thorario,#tnombre{
+    color:$color-nav;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 5rem;                     
+} 
+
+
 .container1 {
         width: 100%;
         height: 100%;
@@ -144,28 +160,20 @@
 
 @media only screen and (max-width: 400px) {           
 .agenda{
-        width: 70%;
+width: 70%;
 
         &__datos1{
-        width: 33rem;
-        margin-left: 2rem;
-        .mb-3{
-        input{
-          width: 25rem;
-        }
-
-        &__datos2{
-          .container1{
-          display: none;
-        }            
-    } 
-  }   
+        width: 100%;
+        
+      }
+    }
+     
                /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
 
     
-}
-}
+
+
                 /* Desktop Styles */
 
 @media only screen and (min-width: 961px) {

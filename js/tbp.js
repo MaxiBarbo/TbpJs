@@ -73,12 +73,13 @@ $(document).ready(function(){
 
     let label = $("label");
     label.css("letter-spacing","1rem")
+    label.css("font-size","2.3em")
 
     inputIndex = $(".input-index");
     inputIndex.css("font-size", "2em")
 
     let provisorio = $("[name*='provisorio']");
-    provisorio.css("font-size", "2em");
+    provisorio.css("font-size", "1em");
     provisorio.css("margin-right", "1rem");
     provisorio.css("letter-spacing","0.2rem");
     provisorio.css("margin-top", "23rem");
