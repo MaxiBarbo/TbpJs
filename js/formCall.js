@@ -6,21 +6,82 @@
         this.mail = mail;
         this.dia = dia;
         this.horario = horario;    
+
+    }  
+
+}
+    function deleteUser() {
+        localStorage.clear()
     }
+
+    function buscarUsuario(user){
+
+        if(!localStorage.getItem("dataArr")){
+
+            return false;
+        }
+        let localStorageArr = JSON.parse(localStorage.getItem("dataArr"));
+        let encontrado = false;
+        let i = 0;
+
+        while (!encontrado && i !=localStorageArr.length){
+
+            if (localStorageArr[i].usuario == user){
+                
+                encontrado = localStorageArr[i];
+                return encontrado;
+            }
+
+            i++
+        }
+            return encontrado;
+    }
+    
+    function buscarDatos(nombre,mail,dia,horario){
+
+        let msj="";
+        if ((nombre) && (mail) && (dia) && (horario)){
+
+            let dato = buscarUsuario(nombre)
+            if(dato = !false){
+
+                msj = "Ya existe ese User";
+            }
+
+        }else{
+                msj = "debes ingresar todos los datos";
+        }
+    }
+    
+    function guardarUsuario(dataArr){
+
+        let item = localStorage.getItem("dataArr");
+        //Se chequea si hay algo guardado
+        if (item){
+
+            // si hay ...recupero y agrego el nuevo dato y vuelvo a guardar
+            let almacenados = JSON.parse(localStorage.getItem("dataArr"));
+            almacenados.push(dataArr);
+
+            let almacenados_string = JSON.stringify(almacenados);
+            localStorage.setItem("dataArr",almacenados_string);
+
+        }else{
+
+            //Como no existe info ...genero un nuevo arreglo ...pusheo el usuario y guardo en el localstorage.  
+            let almacenados = new Array();
+            almacenados.push(dataArr);
+            let almacenados_string = JSON.stringify(almacenados);
+            localStorage.setItem("dataArr",almacenados_string);
+
+        }
 }
 
-function saveStorage() {
+// Array contenedor de ingreso entradas input en Form
 
-localStorage.setItem("Nombre", this.nombre)
-localStorage.setItem("Mail", this.mail)
-localStorage.setItem("Dia", this.dia)
-localStorage.setItem("Horario", this.horario)
-
-}
-// function deleteUser() {
-//     localStorage.clear()
-// }
 var data = [];
+console.log(data)
+// funcion al hacer click en enviar se ejecuta los siguientes eventos de entrada del los inputs en form
 
 $("#dataForm").submit(function(event) {
     event.preventDefault();
@@ -30,14 +91,26 @@ $("#dataForm").submit(function(event) {
     dia = $(this).find('input[name="dataThree"]').val();
     horario = $(this).find('input[name="dataFour"]').val();
 
-    data.push(new Reserva(nombre,mail,dia,horario));
-    
-      
+// comprobamos si existe el usuario una ves ingresado los datos del input
+    let check = buscarDatos(nombre,mail,dia,horario)
+
+            //en esta parte del codigo no logro verificar si el usuario existe, o esat mal ubicada 
+    if(check !== ""){
+
+        const dataArr = data.push(new Reserva(nombre,mail,dia,horario));
+        data.dataArr;
+        guardarUsuario(dataArr);
+    }
+    else{
+        alert("no ingresaste nada")
+    }
+
+// Guardamos al LocalStorage el el array "data"    
+    localStorage.setItem("dataArr", JSON.stringify(data)) 
+
 });
 
-
-console.log(data)
-
+// Enviamos datos guardados a consultar mediante Post
 
 const URLGET = "https://jsonplaceholder.typicode.com/posts";
 
@@ -47,6 +120,7 @@ $.post(URLGET, infoPost ,(respuesta, estado) => {
 
     if(estado === "success"){
 
-    //  console.log(respuesta)
+      console.log(estado)
   }
+
 });

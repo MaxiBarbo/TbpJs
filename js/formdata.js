@@ -8,7 +8,7 @@ const arr = [];
     for (const element of e.target) {
     //  console.log(element.value)
       element.value && arr.push({ name: element.name, 
-                                  value: element.value })
+                                  value: element.value }) 
     }
     
   // al recorrer el array se guardan en const "arr" establecido y push del mismo

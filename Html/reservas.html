@@ -67,15 +67,16 @@
 
       
          <h2 class="titulo-agenda animate__animated animate__rubberBand animate__delay-2s">Agenda</h2>
-        <div class="agenda">
+          <div class="agenda">
             <div class="pantalla">
               <h2 id="tnombre" name="tituloNombre"><span style="color: aliceblue;">Hola!!  </span></h2>
               <h3 id="tfecha" name="tituloFecha"><span style="color: aliceblue;">Tu Fecha:</span><br><br></h3>
               <h3 id="thorario" name="tituloHora"><span style="color: aliceblue;">Tu Horario:</span><br><br></h3>
             </div>
-            <!--Inicio Inputs-->
-           <div class="agenda__datos1">               
-                  
+            
+           <div class="agenda__datos1"> 
+
+            <!--Inicio Form-->   
               <form id="dataForm"> 
                     <label class="titulo-reserva" for="text" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>Nombre</label>
                     <input  type="text" id="input-reserva" name="dataOne" placeholder="Ingresa tu Nombre">
@@ -90,16 +91,12 @@
                     <input  type="time" id="horario" class="form-control" name="dataFour">
 
                   <div class="bReservas">
-                   
                     <input type="submit" id="eReserva" class="btn btn-outline-light btn-lg"> </button> 
                     <button type="reset" class="btn btn-outline-primary btn-lg">Clear</button>
                     <button type="button" class="btn btn-outline-primary btn-lg"onclick='deleteUser()'>Secondary</button>
-                  
-                    
-                  </div>
-
-                    
-              </form>     
+                  </div>  
+              </form>  
+              <!--Fin Form-->
                    <p class="pLogin">Tenes Cuenta? <a href="../Html/formulario.html">Log in</a>.</p>              
           </div> 
 
