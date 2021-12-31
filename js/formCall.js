@@ -95,7 +95,7 @@ $("#dataForm").submit(function(event) {
     let check = buscarDatos(nombre,mail,dia,horario)
 
             //en esta parte del codigo no logro verificar si el usuario existe, o esat mal ubicada 
-    if(check !== ""){
+    if(check === ""){
 
         const dataArr = data.push(new Reserva(nombre,mail,dia,horario));
         data.dataArr;
