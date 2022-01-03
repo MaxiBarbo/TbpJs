@@ -78,11 +78,11 @@ $(document).ready(function(){
     inputIndex = $(".input-index");
     inputIndex.css("font-size", "2em")
 
-    let provisorio = $("[name*='provisorio']");
-    provisorio.css("font-size", "1em");
-    provisorio.css("margin-right", "1rem");
-    provisorio.css("letter-spacing","0.2rem");
-    provisorio.css("margin-top", "23rem");
+    // let provisorio = $("[name*='provisorio']");
+    // provisorio.css("font-size", "1em");
+    // provisorio.css("margin-right", "1rem");
+    // provisorio.css("letter-spacing","0.2rem");
+    // provisorio.css("margin-top", "23rem");
 
 
     

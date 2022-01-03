@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css"/>
+
   
     <link rel="stylesheet" href="../css/index.css">
     <title>Reservas</title>
@@ -37,7 +39,7 @@
                   <a class="nav-link" aria-current="page" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="reservas.html">Reservas</a>
+                <a class="nav-link" href="formulario.html">Resitrar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="fotos.html">Fotos</a>
@@ -63,41 +65,55 @@
                                 <!--Inicio Main-->
     <main onload="loadPage()">
 
-      
-
-      
          <h2 class="titulo-agenda animate__animated animate__rubberBand animate__delay-2s">Agenda</h2>
           <div class="agenda">
             <div class="pantalla">
-              <h2 id="tnombre" name="tituloNombre"><span style="color: aliceblue;">Hola!!  </span></h2>
-              <h3 id="tfecha" name="tituloFecha"><span style="color: aliceblue;">Tu Fecha:</span><br><br></h3>
-              <h3 id="thorario" name="tituloHora"><span style="color: aliceblue;">Tu Horario:</span><br><br></h3>
+              <h2 id="tnombre" name="tituloNombre"><span class="a2">Hola!!  </span></h2>
+              <h3 id="tfecha" name="tituloFecha"><span class="a2">Tu Fecha:</span><br><br></h3>
+              <h3 id="thorario" name="tituloHora"><span class="a2">Tu Horario:</span><br><br></h3>
             </div>
             
-           <div class="agenda__datos1"> 
+          <div id="contain" class="agenda__datos1"> 
+
+             <div class="bForm">
+              <button onclick='showForm()' id='buttonShow' class="bttn-default  bttn-sm bttn-stretch"><span class="a2">Mostrar</span></button>
+              <button onclick="changeTheme()" class="bttn-default bttn-sm bttn-stretch"><span class="a2">Cambiar Tema</span></button>
+            </div>
 
             <!--Inicio Form-->   
+
               <form id="dataForm"> 
-                    <label class="titulo-reserva" for="text" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>Nombre</label>
+
+                <div class="user-box">
+                    <label class="titulo-label" for="text" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>Nombre</label>
                     <input  type="text" id="input-reserva" name="dataOne" placeholder="Ingresa tu Nombre">
+                </div>
 
-                    <label class="titulo-reserva"  for="nombre"><span class="iconify" data-icon="mdi:card-account-mail-outline"></span>Contacto</label>
+                <div class="user-box">
+                    <label class="titulo-label"  for="nombre"><span class="iconify" data-icon="mdi:card-account-mail-outline"></span>Contacto</label>
                     <input  type="text" id="input-reserva" name="dataTwo" placeholder="Ingresa un Mail para que podeamos confirmar">
-                    
-                    <label class="titulo-reserva"  for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Fecha</label>
+                </div>
+
+                <div class="inputbox">    
+                    <label class="titulo-label"  for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Fecha</label>
 	                  <input  type="date" id="fecha" class="form-control" name="dataThree" placeholder="Ingresa la Fecha que Necesitas">
+                </div>
 
-                    <label class="titulo-reserva"  for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Horario</label>
+                <div class="inputbox">
+                    <label class="titulo-label"  for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Horario</label>
                     <input  type="time" id="horario" class="form-control" name="dataFour">
-
+                </div>
+                    
                   <div class="bReservas">
                     <input type="submit" id="eReserva" class="btn btn-outline-light btn-lg"> </button> 
                     <button type="reset" class="btn btn-outline-primary btn-lg">Clear</button>
-                    <button type="button" class="btn btn1 btn-outline-primary btn-lg"onclick='deleteUser()'>Borrar localStorage</button>
+                    <button type="button" class="btn btn1 btn-outline-light btn-lg"onclick='deleteUser()'>Borrar localStorage</button>
                   </div>  
               </form>  
+            
               <!--Fin Form-->
-                   <p class="pLogin">Tenes Cuenta? <a href="../Html/formulario.html">Log in</a>.</p>              
+              <p class="pLogin">Tenes Cuenta? <a href="../Html/formulario.html"> Log in</a>.</p>   
+                              
           </div> 
 
             <!-- Inicio calendario fechas y Reservas--> 
@@ -113,13 +129,13 @@
                     <i class="fas fa-angle-right next"></i>
                   </div>
                   <div class="weekdays">
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
+                    <div>Dom</div>
+                    <div>Lun</div>
+                    <div>Mar</div>
+                    <div>Mierc</div>
+                    <div>Jue</div>
+                    <div>Vier</div>
+                    <div>Sab</div>
                   </div>
                   <div class="days"></div>
                 </div>
@@ -127,24 +143,12 @@
             </div>                 
         </div>
             <!--Fin calendario fechas y Reservas  -->
-           
-         <!-- FORM -->
-        <!-- <div class="form-group row">
-            <label for="data" class="col-2 col-form-label">Dato</label>
-            <div class="col-10">
-                <input id="" name="dataOne" class="form-control" type="text" value="">
-                <input id="" name="dataTwo" class="form-control" type="text" value="">
-                <input id="" name="dataThree" class="form-control" type="date" value="">
-                <input id="" name="dataFour" class="form-control" type="time" value="">
-            </div>
-        </div>
-        <input class="btn btn-large btn-primary" value="Save" type="submit">
-      </form> -->
-
+            
     </main>
-                                        <!--Fin Main-->
 
-                                      
+    
+                                        <!--Fin Main-->
+                         
 
                                     <!--Inicio Footer-->
     <footer>                                                                
@@ -228,6 +232,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 
+    
     <script src="../js/tbp.js"></script>
     <script src="../js/reserva.js"></script>
     <script src="../js/formCall.js"></script>

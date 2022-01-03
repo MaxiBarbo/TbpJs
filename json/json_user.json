@@ -3,31 +3,36 @@
       "user": 1,
       "nombre": "Robert",
       "mail": "ro@lop",
-      "pass": "12345"
+      "pass": "12345",
+      "edad":10
     },
     {
       "user": 2,
       "nombre": "juancho",
       "mail": "ju@gmial",
-      "pass": "lllll"
+      "pass": "lllll",
+      "edad":20
     },
     {
       "user": 2,
       "nombre": "marce",
       "mail": "marea@9333",
-      "pass": "leee"
+      "pass": "leee",
+      "edad":5
     },
     {
       "user": 4,
       "nombre": "julio",
       "mail": "jum@her",
-      "pass": "peee"
+      "pass": "peee",
+      "edad":34
     },
     {
       "user": 5,
       "nombre": "juana",
       "mail": "veuu@reee",
-      "pass": "asee"
+      "pass": "asee",
+      "edad":9
     }
   
   ]

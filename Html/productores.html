@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Una seccion con nuestros genios Productores de cerveza artesanal">
     <meta name="keywords" content="birra, Productores,hilbilys, nomada, thebeerpub, rosario">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css"/>
 
   
     <link rel="stylesheet" href="../css/index.css">
@@ -14,10 +20,25 @@
 </head>
 <body>
     <header>
-    
+        <a href="../index.html"><button type="button" class="btn btn2 btn-outline-danger">Volver</button></a> 
+
     </header>
+    
     <main>
-      
+
+        <button type="button" id="btnApi" class="btn btn1 btn-outline-primary">Solicitar Info Api</button>
+        
+    <div class="datosApi">
+        <div class="datosApi1">
+            <h1 class="a2">Menores de Edad</h1>
+            <div class="apiMenorEdad"></div> 
+        </div>
+
+        <div class="datosApi2">
+            <h1 class="a2">Mayores de Edad</h1>
+            <div class="apiMayorEdad"></div>
+        </div>
+    </div>   
 		
     </main>
     
@@ -98,8 +119,12 @@
         <p class="p-footer">The Beer Pub &copy;Todos Los Derechos Reservados</p>        
     </div>  
     </footer>
-    <script src="../js/formCall.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
+    <script src="../js/ingresoApi.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 </body>
 </html>

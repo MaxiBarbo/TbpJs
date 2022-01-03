@@ -1,14 +1,29 @@
 
 .form-control{
-    background-color: rgb(240, 236, 243);
-    font-size: 1em;
-    border-radius: 0 2rem 2rem 0;
-    
-}
-#input-reserva{
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 0 2rem 2rem 0;
-    height: 3rem;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.7em;  
+    color: rgb(20, 134, 72); 
+     
+}
+
+#input-reserva{
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.7em;
+    color: rgb(20, 134, 72);  
 }
 .btn-outline-primary{
     margin-left: 5rem;
@@ -23,15 +38,14 @@
     padding: 5px 10px;
     margin-left: 10rem;
     border: none;
-    cursor:progress;
     width: 50%;
     opacity: 0.9;
     font-size: 1.5em;
 
 }
-.btn-outline-warning:hover {
-    opacity: 90%;
-}    
+// .btn-outline-warning:hover {
+//     opacity: 90%;
+// }    
 .btn-outline-danger {
     width: 15rem;
     align-self: flex-end;
@@ -40,3 +54,4 @@
     margin-top: 2rem;
     
 }
+

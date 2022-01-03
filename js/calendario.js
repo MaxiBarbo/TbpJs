@@ -27,7 +27,7 @@ const renderCalendar = () => {
 
   const nextDays = 7 - lastDayIndex - 1;
 
-  const months = [
+  const meses = [
     "Enero",
     "Febrero",
     "Marzo",
@@ -42,7 +42,7 @@ const renderCalendar = () => {
     "Deciembre",
   ];
 
-  document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+  document.querySelector(".date h1").innerHTML = meses[date.getMonth()];
 
   document.querySelector(".date p").innerHTML = new Date().toDateString();
 

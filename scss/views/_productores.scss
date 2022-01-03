@@ -1,0 +1,48 @@
+
+.btnApi{
+    width: 20rem;
+
+}
+
+.datosApi{
+    display: flex;
+    flex-direction: row;
+    
+
+    .datosApi1{
+        margin-top: 3rem;
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        
+        .apiMenorEdad{
+        color: white;
+        text-align: center;
+        justify-content: right;
+          
+
+        .s1{
+            color: white;
+   
+        }
+        
+    }
+}   
+    .datosApi2{
+        margin-top: 3rem;
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .apiMayorEdad{
+            color: white;
+            text-align: center;
+
+            .s2{
+                color: white;
+            } 
+        }
+    }
+}

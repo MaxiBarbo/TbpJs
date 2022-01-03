@@ -11,16 +11,19 @@ $(function(){
     
         if(estado === "success"){
           let misDatos = respuesta;
+          
           for (const dato of misDatos) {
     
-    
+      // console.log(respuesta)
+
             let nombre = dato.nombre;
             let edad = dato.edad;
             let mail = dato.mail;
-            let id = dato.id;
-    
+            
+            console.log(mail)
+
             if(edad < 18){
-    
+              
             $(".apiMenorEdad").append(`<p><span class="s1">Nombre</span>: ${nombre}</p>
                                         <p><span class="s1">Edad</span>: ${edad} años</p>
                                         <p><span class="s1">Mail</span>: ${mail}</p>`);

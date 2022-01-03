@@ -38,7 +38,7 @@
 }
 .titulo-reserva{
     color: $color-text-input;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: $text-titulos;
     // z-index: -20;
     // position: absolute;
@@ -51,9 +51,14 @@
     
 }
 .a2{
-    color: $color-nav;
+    color: whitesmoke;
     font-family: $text-nav;
     size: 2em;
+    letter-spacing: 3px;
+}
+.a3{
+    font-family: $text-nav;
+    size: 2em; 
 }
 .tituloMg{
     font-size: 3.5em;
@@ -64,6 +69,10 @@
     color: $color-titulos;
     text-align: center;
     display: none;
+}
+.titulo-label{
+    color: whitesmoke;
+    
 }
 
 /*titulos Videos*/   

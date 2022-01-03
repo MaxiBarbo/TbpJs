@@ -23,8 +23,6 @@ const arr = [];
     // se pushea una persona al array "arr"
     //  const personOne = new User("mei34","meilin","ksikie@kek",93847);
     //  arr.push(personOne);
-     
- 
     //  console.log(personOne);
   
 $(document).ready(()=>{

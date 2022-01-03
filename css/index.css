@@ -10,14 +10,28 @@
 /*Trasnsparencias*/
 /*utils*/
 .form-control {
-  background-color: #f0ecf3;
-  font-size: 1em;
-  border-radius: 0 2rem 2rem 0; }
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.7em;
+  color: #148648; }
 
 #input-reserva {
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 0 2rem 2rem 0;
-  height: 3rem; }
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.7em;
+  color: #148648; }
 
 .btn-outline-primary {
   margin-left: 5rem;
@@ -31,13 +45,9 @@
   padding: 5px 10px;
   margin-left: 10rem;
   border: none;
-  cursor: progress;
   width: 50%;
   opacity: 0.9;
   font-size: 1.5em; }
-
-.btn-outline-warning:hover {
-  opacity: 90%; }
 
 .btn-outline-danger {
   width: 15rem;
@@ -84,7 +94,7 @@
 
 .titulo-reserva {
   color: #FFD6AF;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: "Indie Flower", cursive; }
 
 .a1 {
@@ -92,7 +102,12 @@
   font-size: 2em; }
 
 .a2 {
-  color: #FFD046;
+  color: whitesmoke;
+  font-family: "Kalam", cursive;
+  size: 2em;
+  letter-spacing: 3px; }
+
+.a3 {
   font-family: "Kalam", cursive;
   size: 2em; }
 
@@ -105,6 +120,9 @@
   color: white;
   text-align: center;
   display: none; }
+
+.titulo-label {
+  color: whitesmoke; }
 
 /*titulos Videos*/
 /*Mobile Responsive*/
@@ -495,6 +513,7 @@ footer {
   .agenda .pantalla {
     margin-top: 5%; }
   .agenda__datos1 {
+    margin-top: 1rem;
     width: 40rem;
     height: 100%;
     border-radius: 1rem;
@@ -506,6 +525,22 @@ footer {
     .agenda__datos1 .pLogin {
       margin-top: 2rem;
       text-align: center; }
+    .agenda__datos1 .init {
+      font-family: "Kalam", cursive;
+      animation-name: init;
+      transition: filter 0.4s 0.5s ease-out;
+      filter: drop-shadow(0px 2px 4px rgba(26, 25, 40, 0.1)); }
+
+@keyframes init {
+  0% {
+    opacity: 0; }
+  50% { }
+  100% {
+    opacity: 1; } }
+    .agenda__datos1 .bForm {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
   .agenda__datos2 {
     margin-top: 2rem;
     width: 30rem;
@@ -514,11 +549,22 @@ footer {
 
 .bReservas {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-evenly; }
+
+#contain {
+  margin-bottom: 10rem; }
 
 #dataForm {
-  margin-top: 6rem;
-  width: 100%; }
+  margin-top: 5rem;
+  width: 100%;
+  height: fit-content;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transition: all 1s 0.2s ease-out; }
 
 #tfecha, #thorario, #tnombre {
   color: #FFD046;
@@ -544,7 +590,7 @@ footer {
 .month {
   width: 100%;
   height: 12rem;
-  background-color: #167e56;
+  background-color: #2E3532;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -610,7 +656,7 @@ footer {
   opacity: 0.5; }
 
 .today {
-  background-color: #167e56; }
+  background-color: #2E3532; }
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
@@ -974,6 +1020,36 @@ p {
 @media only screen and (max-width: 400px) {
   .box-latas {
     display: none; } }
+
+.btnApi {
+  width: 20rem; }
+
+.datosApi {
+  display: flex;
+  flex-direction: row; }
+  .datosApi .datosApi1 {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .datosApi .datosApi1 .apiMenorEdad {
+      color: white;
+      text-align: center;
+      justify-content: right; }
+      .datosApi .datosApi1 .apiMenorEdad .s1 {
+        color: white; }
+  .datosApi .datosApi2 {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .datosApi .datosApi2 .apiMayorEdad {
+      color: white;
+      text-align: center; }
+      .datosApi .datosApi2 .apiMayorEdad .s2 {
+        color: white; }
 
 @font-face {
   font-family: "Play";
