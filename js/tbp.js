@@ -12,7 +12,7 @@
         theme = !theme
         if (theme) {
 
-            imagen.style.backgroundImage = "url('./Imagenes/body-f9.jpg')";
+            imagen.style.backgroundImage = "url('/Imagenes/body-f9.jpg')";
             
             for (let i = 0; i < hreservas.length; i++) { 
          
@@ -35,7 +35,7 @@
         } else {
 
             var imagen = document.getElementById("body");
-            imagen.style.backgroundImage = "url('./Imagenes/body-f3.jfif')";
+            imagen.style.backgroundImage = "url('/Imagenes/body-f3.jfif')";
 
             for (let i = 0; i < hreservas.length; i++) {
                
