@@ -121,7 +121,6 @@ function valorDolar(moneda,resultado){
     return a*b;
     } 
 
-
 // Funcion para Calcular cuantos USDT necesito para comprar las siguientes criptos BTC - ETH - BAKE
 // usdt_btc = "Numero Ingresado" * Valor BTC
 // usdt_eth = "numero ingresado" * valor ETH
@@ -195,7 +194,7 @@ function calculadora(){
         resultado = numero1 - numero2;
         alert("Resultado de tu resta"+ " " + resultado)
     }
-    }
+}
     
 //Funcion inventada para calcular dias de vacaciones
     
@@ -276,3 +275,6 @@ function ciudad() {
         city = prompt("eligue un numero de 1 a 4").toLowerCase();
     }
 }    
+
+
+        

@@ -14,19 +14,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css"/>
 
-  
     <link rel="stylesheet" href="../css/index.css">
     <title>Reservas</title>
 </head>
                                 <!--Inicio Body-->
-<body>
+<body id="body">
     <header>
       <!--Imagen Logo tbp-->
+
       <picture>
         <source srcset="../Imagenes/logo-tbp-oficial.jpg" media="(max-width: 400px)">
         <source srcset="../Imagenes/logotbp10.png">
         <img class="imagen-nav" src="../Imagenes/logotbp10.png" alt="imagen-nav">
       </picture>
+
       <!--Inicio Barra de Navegacion-->
       <nav class="navegacion navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -39,7 +40,7 @@
                   <a class="nav-link" aria-current="page" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="formulario.html">Resitrar</a>
+                <a class="nav-link" href="formulario.html">Registrar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="fotos.html">Fotos</a>
@@ -54,7 +55,8 @@
           </div>
         </div>
       </nav>
-      <!--Fin Barra de Navegacion-->  
+      <!--Fin Barra de Navegacion--> 
+
       <!--Inicio Reloj-->
       <div class="reloj">
         <p class="tiempo"></p>
@@ -63,14 +65,22 @@
       <!--Fin Reloj-->         
     </header> 
                                 <!--Inicio Main-->
+                                
     <main onload="loadPage()">
+
+      <!-- Button Switch Tema -->
+        <div>
+          <input class="inputOne" onclick="bttnTema()" type="checkbox" id="toggle"/>
+          <label class="labelOne" for="toggle"></label>
+        </div>
+      
 
          <h2 class="titulo-agenda animate__animated animate__rubberBand animate__delay-2s">Agenda</h2>
           <div class="agenda">
             <div class="pantalla">
-              <h2 id="tnombre" name="tituloNombre"><span class="a2">Hola!!  </span></h2>
-              <h3 id="tfecha" name="tituloFecha"><span class="a2">Tu Fecha:</span><br><br></h3>
-              <h3 id="thorario" name="tituloHora"><span class="a2">Tu Horario:</span><br><br></h3>
+              <h2 id="tnombre" name="tituloNombre"><span id="h3" class="a2">Hola!!  </span></h2>
+              <h3 id="tfecha" name="tituloFecha"><span id="h3" class="a2">Tu Fecha:</span><br><br></h3>
+              <h3 id="thorario" name="tituloHora"><span id="h3" class="a2">Tu Horario:</span><br><br></h3>
             </div>
             
           <div id="contain" class="agenda__datos1"> 
@@ -85,28 +95,28 @@
               <form id="dataForm"> 
 
                 <div class="user-box">
-                    <label class="titulo-label" for="text" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>Nombre</label>
+                    <label class="titulo-label" name="labelOne" for="text" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>Nombre</label>
                     <input  type="text" id="input-reserva" name="dataOne" placeholder="Ingresa tu Nombre">
                 </div>
 
                 <div class="user-box">
-                    <label class="titulo-label"  for="nombre"><span class="iconify" data-icon="mdi:card-account-mail-outline"></span>Contacto</label>
+                    <label class="titulo-label" name="labelTwo" for="nombre"><span class="iconify" data-icon="mdi:card-account-mail-outline"></span>Contacto</label>
                     <input  type="text" id="input-reserva" name="dataTwo" placeholder="Ingresa un Mail para que podeamos confirmar">
                 </div>
 
                 <div class="inputbox">    
-                    <label class="titulo-label"  for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Fecha</label>
+                    <label class="titulo-label" name="labelThree" for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Fecha</label>
 	                  <input  type="date" id="fecha" class="form-control" name="dataThree" placeholder="Ingresa la Fecha que Necesitas">
                 </div>
 
                 <div class="inputbox">
-                    <label class="titulo-label"  for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Horario</label>
+                    <label class="titulo-label" name="labelFour" for="nombre"><span class="iconify" data-icon="mdi:account-clock-outline"></span>Horario</label>
                     <input  type="time" id="horario" class="form-control" name="dataFour">
                 </div>
                     
                   <div class="bReservas">
                     <input type="submit" id="eReserva" class="btn btn-outline-light btn-lg"> </button> 
-                    <button type="reset" class="btn btn-outline-primary btn-lg">Clear</button>
+                    <button type="reset" name="clear" class="btn btn-outline-primary btn-lg">Clear</button>
                     <button type="button" class="btn btn1 btn-outline-light btn-lg"onclick='deleteUser()'>Borrar localStorage</button>
                   </div>  
               </form>  
@@ -140,15 +150,13 @@
                   <div class="days"></div>
                 </div>
               </div>
-            </div>                 
+            </div>  
+
         </div>
-            <!--Fin calendario fechas y Reservas  -->
-            
+            <!--Fin calendario fechas y Reservas  -->          
     </main>
 
-    
                                         <!--Fin Main-->
-                         
 
                                     <!--Inicio Footer-->
     <footer>                                                                
@@ -223,7 +231,7 @@
 
     <div>                
     <p class="p-footer">The Beer Pub &copy;Todos Los Derechos Reservados. San juan 1943, Rosario - Sta Fe.</p>        
-  </div>      
+  </div>                                                
     </footer>  
                                     <!--Fin Footer-->  
     <!--Inicio Script-->
@@ -232,10 +240,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 
-    
     <script src="../js/tbp.js"></script>
     <script src="../js/reserva.js"></script>
-    <script src="../js/formCall.js"></script>
+    <script src="../js/formReserva.js"></script>
     <script src="../js/calendario.js"></script>
     <!--Fin Script-->   
 </body>

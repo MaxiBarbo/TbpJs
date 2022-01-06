@@ -1,7 +1,10 @@
- // constante para buscar en local storage info guardada
 
+ 
+ // constante para buscar en local storage info guardada
  const clave_localStorage = "dataArr"
+
  let show = false
+
  // Clase para solicitar Pedidos datos entrada a Usuarios
 
     class Reserva{
@@ -18,6 +21,7 @@
     function deleteUser() {
         localStorage.clear()
     }
+
 // Funcion para confiramr si se ingresaron datos en inputs de entrada
 
     function confirmar_datos(nombre,mail,dia,horario){
@@ -26,7 +30,9 @@
         
         if ( (nombre !=="") && (mail !=="") && (dia !=="") && (horario !=="")){
        
-            alert("gracias")              
+            $("#tfecha").append($("[name*='dataThree']").val());
+            $("#thorario").append($("[name*='dataFour']").val());
+            $("#tnombre").append($("[name*='dataOne']").val());           
     }
         else {
 
@@ -55,6 +61,7 @@
                     localStorage.setItem(clave_localStorage,dato_string);    
         }
     }
+// Funcion para buscar si el usuario se encuentra registrado
 
     function buscar_user(user){
         
@@ -72,9 +79,7 @@
                 if(dato_guardado[i] == user){
 
                     encontrado = dato_guardado[i];
-
                     // console.log(encontrado)
-
                     return encontrado;
                 }
                 
@@ -97,23 +102,7 @@
           }
         }
       }
-// Funcion para cambiar el color de fondo guardando desde LocalStorage
 
-    let theme = true
-    function changeTheme() {
-        const contain = document.getElementById('contain')
-        theme = !theme
-        if (theme) {
-            
-            contain.style.border = "";
-            localStorage.setItem('theme', 'dark')
-            
-        } else {
-
-            contain.style.border = "3px solid #4C191B";
-            localStorage.setItem('theme', 'light')            
-        }
-    }
 // Funcion para mostrar u ocultar Form
 
     function showForm() {
@@ -148,12 +137,12 @@ console.log(data)
         dia = $(this).find('input[name="dataThree"]').val();
         horario = $(this).find('input[name="dataFour"]').val();
 
-    // comprobamos si existe el usuario una ves ingresado los datos del input
+// comprobamos si existe el usuario una ves ingresado los datos del input
 
         let exist_user = confirmar_datos(nombre,mail,dia,horario);
             if (exist_user === ""){
                 
-                //en esta parte del codigo no logro verificar si el usuario existe, o esat mal ubicada 
+//en esta parte del codigo no logro verificar si el usuario existe, o esat mal ubicada 
         
             data.push(new Reserva(nombre,mail,dia,horario));
             guardar_user(data); 
@@ -163,13 +152,10 @@ console.log(data)
             else{
                 alert("Favor Completar todos los Datos")
             }
-    // Guardamos al LocalStorage el el array "data"    
+        // Guardamos al LocalStorage el el array "data"    
         // localStorage.setItem("dataArr", JSON.stringify(data)) 
 
     });
-
-    
-
 
 // Enviamos datos guardados a consultar mediante Post
 
@@ -181,7 +167,7 @@ $.post(URLGET, infoPost ,(respuesta, estado) => {
 
     if(estado === "success"){
 
-      console.log(estado)
+      console.log(respuesta)
   }
 
 });

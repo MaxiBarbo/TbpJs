@@ -139,3 +139,20 @@ class Tareas {
  function processData() {
     
  }
+ // Funcion para cambiar el color de fondo guardando desde LocalStorage
+
+ let theme = true
+ function changeTheme() {
+     const contain = document.getElementById('contain')
+     theme = !theme
+     if (theme) {
+         
+         contain.style.body = "";
+         localStorage.setItem('theme', 'dark')
+         
+     } else {
+
+         contain.style.border = "3px solid #053B06";
+         localStorage.setItem('theme', 'light')            
+     }
+ }

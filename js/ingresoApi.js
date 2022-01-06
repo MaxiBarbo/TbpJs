@@ -1,6 +1,5 @@
 $(function(){
 
-
     //Declaramos la url del archivo JSON local
     const URLJSON = "../json/json_user.json" 
     

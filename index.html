@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/index.css">
     <title>index</title>
 </head>
-<body>
+<body id="body">
     <header>
         
 <!--Imagen Logo tbp-->
@@ -35,7 +35,7 @@
                   <a class="nav-link" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="Html/formulario.html">Resitrar</a>
+                  <a class="nav-link" href="Html/formulario.html">Registrar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Html/fotos.html">Fotos</a>
@@ -62,8 +62,15 @@
     
 <!--Inicio Main-->       
     <main class="main1">  
+        
+<!-- Button Switch Tema -->
+        <div>
+            <input class="inputOne" onclick="bttnTema()" type="checkbox" id="toggle"/>
+            <label class="labelOne" for="toggle"></label>
+          </div>
+
         <div class="main1__cyan">
-            <a href="Html/reservas.html"><h1 class="titulo-violeta animate__animated animate__headShake">Agenda</h1></a> 
+            <a href="Html/reservas.html"><h1 id="h3" class="titulo-violeta animate__animated animate__headShake ">Agenda</h1></a> 
         </div>
 
          <div class="main1__violeta">
@@ -87,12 +94,12 @@
                         <label><input type="checkbox"><strong>Remember me</strong></label>
                     </div>
 
-                    <div class="index-boton">
+                    <!-- <div class="index-boton">
                         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirm</button>
                     
                     <a href="Html/formulario.html">
                         <button type="button" class="btn btn-outline-warning">Registrar</button></a>
-                    </div> 
+                    </div>  -->
                 </form>      
         </div>
 

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <title>Videos</title>
 </head>
-<body>                              <!--Inicio Body-->
+<body id="body">                              <!--Inicio Body-->
     <header>
       <!--Imagen Logo tbp-->
       <picture>
@@ -35,7 +35,7 @@
                   <a class="nav-link" aria-current="page" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="formulario.html">Resitrar</a>
+                <a class="nav-link" href="formulario.html">Registrar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="fotos.html">Fotos</a>
@@ -58,9 +58,15 @@
     </div>
     <!--Fin Reloj-->
     </header> 
+    <!-- Button Switch Tema -->
+    <div>
+      <input class="inputOne" onclick="bttnTema()" type="checkbox" id="toggle"/>
+      <label class="labelOne" for="toggle"></label>
+    </div>
     <main class="main4">
       <h1 class="main4__titulos4 animate__animated animate__rubberBand animate__delay-3s">Re Music</h1>
                                 <!--Inicio Lista de Divs-->
+
                               <!--Inicio 1er bloque de Video-->                             
                               <div class="main4__section1">
                                 <iframe title="videos1" class="main4__section1__videos-iframe" src="https://www.youtube.com/embed/M23X3zzIawA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
@@ -108,11 +114,7 @@
                                
                                     <!--Fin Lista de Divs-->
     </main>
-
-                                    <!--Inicio Script-->                                                                                  
-     
-
-                                    <!--Fin Script-->
+                                    
                                     <!--Inicio Footer-->
     <footer>                                                                
       <div class="logos-redes"> 
@@ -188,12 +190,13 @@
         <p class="p-footer">The Beer Pub &copy;Todos Los Derechos Reservados. San juan 1943, Rosario - Sta Fe.</p>        
     </div>       
     </footer>  
-                                  <!--Fin Footer--> 
+                                      <!--Fin Footer--> 
+    <!--Inicio Script-->                                                                                                              
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
       <script src="../js/arcanoid.js"></script>
       <script src="../js/clock.js"></script>
       <script src="../js/tbp.js"></script>
-                                     
+       <!--Fin Script-->                              
 </body>
                                     <!--Fin Body-->
 </html>

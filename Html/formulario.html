@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <title>Registro</title>
 </head>
-<body class="bodyForm" onload="loadPage()"> 
+<body id="body" class="bodyForm" onload="loadPage()"> 
   <header>
     <!--Imagen Logo tbp--> 
     <picture>
@@ -57,6 +57,12 @@
   </div>
   <!--Fin Reloj-->      
   </header>
+
+  <div>
+    <input class="inputOne" onclick="bttnTema()" type="checkbox" id="toggle"/>
+    <label class="labelOne" for="toggle"></label>
+  </div>
+
   <!--Inicio fila de Box-cajas-->
   <section class="box-latas">
     <div class="caja uno">
@@ -108,7 +114,7 @@
       
         <form id="form">
           
-            <label class="titulo-reserva" for="text" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>usuario</label>
+            <label class="titulo-reserva" for="user" ><span  class="iconify" data-icon="mdi:account-cowboy-hat-outline"></span>usuario</label>
             <input class="input-index" id="usuario" type="text" name="user"  placeholder="usuario">
 
             <label class="titulo-reserva" id="nombre" for="nombre"><span class="iconify" data-icon="mdi:account-edit-outline"></span>Nombre</label>
@@ -121,7 +127,7 @@
             <input class="input-index" type="password" name="pass" placeholder="Password">
 
             <button type="submit" name="mg" class="btn btn-outline-light btn-lg">Guardar usuario</button>
-            <button type="reset" value="clear" class="btn btn-outline-primary btn-lg">Clear</button>
+            <button type="reset"  class="btn btn-outline-primary btn-lg">Clear</button>
             <button  onclick='deleteUser()' name="clear" class="btn btn-outline-primary btn-lg">Borrar Usuario</button>
 
             <div class="siete"></div>

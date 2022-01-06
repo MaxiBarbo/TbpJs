@@ -54,4 +54,42 @@
     margin-top: 2rem;
     
 }
+// Estilo Botton cambiar Tema 
+
+.inputOne[type=checkbox] {
+    visibility: hidden;
+  }
+  .inputOne[type=checkbox]:checked + .labelOne {
+    transform: rotate(360deg);
+    background-color: #000;
+  }
+  .inputOne[type=checkbox]:checked + .labelOne:before {
+    transform: translateX(80px);
+    background-color: #fff;
+  }
+  
+  .labelOne {
+    display: flex;
+    width: 150px;
+    height: 60px;
+    border: 6px solid;
+    border-radius: 99em;
+    position: relative;
+    transition: transform 0.75s ease-in-out;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+  }
+  .labelOne:before {
+    transition: transform 0.75s ease;
+    transition-delay: 0.5s;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 4px;
+    left: 5px;
+  }
 

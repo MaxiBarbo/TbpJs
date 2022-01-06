@@ -10,6 +10,7 @@ class User {
     changeValues(value) {
       this[value.name] = value.value
     }
+// Funcion para guardar por input indivudual y no en formato string    
     save() {
       localStorage.setItem('user', JSON.stringify(this.user))
       localStorage.setItem('nombre', JSON.stringify(this.nombre))

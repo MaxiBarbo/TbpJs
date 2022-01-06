@@ -56,6 +56,41 @@
   position: fixed;
   margin-top: 2rem; }
 
+.inputOne[type=checkbox] {
+  visibility: hidden; }
+
+.inputOne[type=checkbox]:checked + .labelOne {
+  transform: rotate(360deg);
+  background-color: #000; }
+
+.inputOne[type=checkbox]:checked + .labelOne:before {
+  transform: translateX(80px);
+  background-color: #fff; }
+
+.labelOne {
+  display: flex;
+  width: 150px;
+  height: 60px;
+  border: 6px solid;
+  border-radius: 99em;
+  position: relative;
+  transition: transform 0.75s ease-in-out;
+  transform-origin: 50% 50%;
+  cursor: pointer; }
+
+.labelOne:before {
+  transition: transform 0.75s ease;
+  transition-delay: 0.5s;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 4px;
+  left: 5px; }
+
 /*titulos Index*/
 .titulo-violeta {
   font-size: 2.5em;
@@ -94,7 +129,7 @@
 
 .titulo-reserva {
   color: #FFD6AF;
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "Indie Flower", cursive; }
 
 .a1 {
@@ -193,6 +228,9 @@ body {
   background-attachment: fixed;
   width: auto;
   height: 100vh; }
+
+.bold {
+  color: black; }
 
 /*Partials*/
 header {
