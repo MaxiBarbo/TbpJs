@@ -12,18 +12,17 @@ let bake = 2.5;
     $("#usdArs").click(function convertir(pesos) {
     
         pesos = $("[name*='dolar']").val();
-
         let resultadoDolar = multi(pesos,dolar);
         let resultadoIvaDolar = sumarIva(resultadoDolar);
 
         alert(`Ingresaste: ${pesos} Ars
         Sin Iva: ${resultadoDolar} Usd
         Con iva: ${resultadoIvaDolar} Usd`);
+    }); 
 
     $("#eurArs").click(function convertir(pesos){
 
         pesos = $("[name*='dolar']").val();
-
         let resultadoEuro = multi(pesos,euro);
         let resultadoIva = sumarIva(resultadoEuro);
         alert(`Ingresaste: ${pesos} Ars
@@ -35,14 +34,17 @@ let bake = 2.5;
 
         pesos = $("[name*='dolar']").val();
         let resultadobtc = multi(pesos,btc);
-        
         alert(`Ingresaste: ${pesos} Ars
         Son: ${resultadobtc} BTC`);
     }); 
 
-
-
-   
+    $("#ethArs").click(function convertir(pesos){
+        pesos = $("[name*='dolar']").val();
+        let resultadoeth = multi(pesos,eth);
+        alert(`Ingresaste: ${pesos} Ars
+        Son: ${resultadoeth} ETH`);
+    });
+  
 });
 
 function multi(a,b){
@@ -53,4 +55,3 @@ function sumarIva(precioCosto){
     return (precioCosto + (precioCosto * 0.21));
     }
 
-});

@@ -53,7 +53,7 @@ $(document).ready(function(){
 // Todas las funciones que ingresen en este bloque se ejecutan de inmediato
     
     $(".caja").slideUp(0).slideDown(0);
-    $("body").append('<input type="button" class="btn btn-outline-danger btn-lg" value="Go Top" onClick=toTop()>Volver');
+    $("body").append('<input type="button" class="btn btn-outline-danger btn-lg" value="Go Top" onClick=toTop()>');
      
     let background = $(".caja");
     background.css("background-size","cover")
