@@ -30,8 +30,11 @@
            </header>   
           
       <div class="container ms">
+
         
+
           <div class="sim">
+            
             <a href="../index.html"><button type="button" class="btn btn2 btn-outline-danger">Volver</button></a> 
             <h1 class="p1 fw-light">Simuladores</h1>
           </div>
@@ -43,8 +46,7 @@
               <button id="usdArs" type="button" class="btn btn-outline-warning btn-sm">USD/ARS</button>
               <br>
               <button id="btcArs" type="button" class="btn btn-outline-warning btn-sm">BTC/ARS</button>
-              <button id="ethArs" type="button" class="btn btn-outline-warning btn-sm">ETH/ARS</button>
-              
+              <button id="ethArs" type="button" class="btn btn-outline-warning btn-sm">ETH/ARS</button>           
             
             <div class="mb-3">
               <input type="text" class="form-control" name="dolar" id="dolar" placeholder="Ingrese cantidad de Ars:">
@@ -71,10 +73,14 @@
             </div>
             
             <div class="col-lg-3 col-md-4 col-6">
-              <a href="#" class="d-block mb-4 h-100">
-                  <button type="button" class="btn btn1 btn-outline-primary" onclick="ciudad();">Ciudad</button>
-                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
-              </a>
+
+                  <button type="button" id="usdt" class="btn btn1 btn-outline-primary btn-sm">Dolar</button>
+                  <button type="button" id="euro" class="btn btn1 btn-outline-primary btn-sm">Euro</button>
+
+            <div class="section">
+              <ul id="resultado"></ul>
+            </div>
+
             </div>
             <div class="col-lg-3 col-md-4 col-6">
               <a href="#" class="d-block mb-4 h-100">
@@ -95,7 +101,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
     
-    <script src="../js/calculos.js"></script>
+    <script src="../js/monedas.js"></script>
+    <script src=".. /js/calculos_divisas.js"></script>
     <script src="../js/temas.js"></script>
     <script src="../js/simuladores.js"></script>
     <!-- Fin Script -->
