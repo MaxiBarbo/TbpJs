@@ -36,7 +36,21 @@
           </div>
           <div class="row text-center text-lg-start">
             <div class="col-lg-3 col-md-4 col-6">
+              <!-- <button type="button" class="btn btn1 btn-outline-danger" onclick="valorDolar();">USD</button> -->
+              <button id="usdArs" type="button" class="btn btn-outline-warning">USD/ARS</button>
+              <button id="eurArs" type="button" class="btn btn-outline-warning">EUR/ARS</button>
+              <br>
+              <button id="btcArs" type="button" class="btn btn-outline-warning">BTC/ARS</button>
+              <button id="ethArs" type="button" class="btn btn-outline-warning">ETH/ARS</button>
+              <button id="bakeArs" type="button" class="btn btn-outline-warning">BAKE/ARS</button>
+            
+            <div class="mb-3">
+              <input type="text" class="form-control" name="dolar" id="dolar" placeholder="Ingrese cantidad de Ars:">
+              <div id="infoBox"></div>
+            </div>
               
+        </div>
+            <div class="col-lg-3 col-md-4 col-6">
               <a class="d-block mb-4 h-100">
                   <button type="button" class="btn1 btn btn-outline-info"   onclick="calcularDias();">Dias Vacaciones</button>
                 <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
@@ -54,12 +68,7 @@
                 <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
               </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="#" class="d-block mb-4 h-100">
-                  <button type="button" class="btn btn1 btn-outline-danger" onclick="valorDolar();">USD</button>
-                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
-              </a>
-            </div>
+            
             <div class="col-lg-3 col-md-4 col-6">
               <a href="#" class="d-block mb-4 h-100">
                   <button type="button" class="btn btn1 btn-outline-primary" onclick="ciudad();">Ciudad</button>
@@ -97,6 +106,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
     <script src="../js/btn.js"></script>
+    <script src="../js/calculos.js"></script>
 
     <script src="../js/temas.js"></script>
     <script src="../js/tbp.js"></script>
