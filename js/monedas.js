@@ -2,39 +2,60 @@
 // Funcion para obtener datos de la Api en solicitada
     $("#usdt").click(function(){
 
-        obtenerDatos('dolar');
+        obtenerDatos();
 
     });
 
     $("#euro").click(function(){
 
-        obtenerDatos('uf');
+        obtenerDatos();
 
     });
 
-    function obtenerDatos(valor){
+    function division(a,b){
+        return a/b;
+    } 
 
-    let url = `https://mindicador.cl/api/${valor}`;
+    function obtenerDatos(pesosBtc){
+
+    pesosBtc = $("[name*='btc']").val();
+
+    let url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
 
     const api = new XMLHttpRequest();
     api.open('get', url, true);
     api.send();
 
+    
+
     api.onreadystatechange = function(){
 
         if(this.status == 200 && this.readyState == 4){
 
-            let datos = JSON.parse(this.responseText);
-            // console.log(datos);
+            const datos = JSON.parse(this.responseText);
+            console.log(datos);
+
+            let resultadoBtc = datos.bpi.USD.rate_float;
+            let resultadoDolar = division(pesosBtc,resultadoBtc);
+
+            // let resultadoBtcEuro = datos.bpi.EUR.rate_float;
+            // let resultadoEuro = division(pesosBtc,resultadoBtcEuro);
+            
+
+            // console.log(resultadoDolar);
+            let cotizacionBtc = $(".boxBtc");
+            cotizacionBtc.append(`<span>$ ${datos.bpi.USD.rate_float} USD </span>`);
 
             let resultado = $("#resultado");
-            resultado.innerHTML = '';
+            resultado.append(`<li> Fecha:  ${datos.time.updated}</li>`);
+            resultado.append(`<li> ${datos.chartName} |$ ${resultadoDolar}</li>`);
+            
 
-            for (const item of datos.serie) {
-                // console.log(item.id);
+            // for (const item of datos) {
+            //     // console.log(item);
 
-                resultado.append(`<li> ${item.fecha.substr(0,10)} | $ ${item.valor}</li>`);
-            }
+                
+            // }
         }
     }
 }
